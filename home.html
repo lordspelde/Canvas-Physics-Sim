@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>FUN WITH PHYSICS!</title>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<h1>BOUNCY BOUNCY BOING BOING</h1>
+		
+		<div id="main">
+			<form>
+				<fieldset>
+					<legend>Configure Simulation</legend>
+
+					<!-- Ball Config -->
+					<label class="subHeader" id="numBallsLabel">Ball Config</label>
+					<br>
+					<label id="numBallLabel" for="numBalls">Number of Balls</label>
+					<input class="xl" id="numBalls" type="range" step="1" min="1" max="500" value="100">
+					<br>
+
+					<!-- Ball Size -->
+					<label id="ballSize">Ball Size</label>
+					<br>
+					<label for="ballSizeMin">Min </label>
+					<input class="l" id="ballSizeMin" type="range" step="0.1" min="0.1" max="50" value="5">
+					<label for="ballSizeMax">Max </label>
+					<input class="l" id="ballSizeMax" type="range" step="0.1" min="0.1" max="50" value="15">
+
+					<br>
+					<br>
+					<input class="button" id="clearBalls" type="button" value="Reset Balls">
+					<br>
+					<br>
+
+					<!-- Slow Factor -->
+					<label class="subHeader" id="slowFactorLabel" for="slowFactor">Drag</label>
+					<br>
+					<input class="xl" id="slowFactor" type="range" step="0.001" min="0" max="2" value="0.9">
+					<br>
+
+					<!-- Gravity -->
+					<label class="subHeader" id="gravityLabel">Gravity</label>
+					<br>
+
+					<div id="gravitySettingHolder">
+						<label>Y </label> <input class="l" id="gravityY" type="range" step="0.1" min="-10" max="10" value="1">
+						<br>
+						<label>X </label> <input class="l" id="gravityX" type="range" step="0.1" min="-10" max="10" value="0">
+						<br>
+					</div>
+
+					<label for="gravitySetting">Gravity Setting</label>
+					<select id="gravitySetting">
+						<option value="0">None</option>
+						<option value="1">Default</option>
+						<option value="2">Follow Mouse</option>
+					</select>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Insert Custom Ball</legend>
+					<label for="customBallSize">Ball Size </label>
+					<input id="customBallSize" type="number" step="0.1" min="0.1" max="50" value="10">
+					<br>
+					<label for="customBallBouncyNess">Bouncy-ness </label>
+					<input id="customBallBouncyNess" type="number" step="0.01" min="0" max="2" value="0.8">
+					<br>
+					<label for="customBallColor">Color </label>
+					<input id="customBallColor" type="text" value="red">
+					<br><br>
+					<input id="insertCustomBall" type="button" value="Insert Custom Ball">
+				</fieldset>
+
+				<br>
+				<input class="button" id="autoStep" type="button" value="Start Simulation">
+				<input class="button" id="step" type="button" value="Manual Step">
+				<input class="button" id="reset" type="reset" value="Reset">
+			</form>
+
+			<canvas id="canvas" width="800" height="600"></canvas>
+		</div>
+	</body>
+</html>

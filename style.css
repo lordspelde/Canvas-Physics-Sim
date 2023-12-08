@@ -1,0 +1,37 @@
+body {
+	background: linear-gradient(-45deg, rgb(50, 110, 255), rgb(200, 0, 255));
+	min-height: 100vh;
+}
+
+#main {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+fieldset {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.button {
+	font-size: 2em;
+	margin-right: 25px;
+}
+
+.xl {
+	width: 100%;
+}
+
+.l {
+	width: 95%;
+}
+
+.subHeader {
+	font-size: 2em;
+}
+
+#canvas {
+	background-color: lemonchiffon;
+	margin-left: auto;
+	margin-right: auto;
+}
